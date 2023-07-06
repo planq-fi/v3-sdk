@@ -1,7 +1,7 @@
 import { Interface } from '@ethersproject/abi'
-import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@uniswap/sdk-core'
+import { BigintIsh, Currency, CurrencyAmount, TradeType } from '@planq-fi/sdk-core'
 import { encodeRouteToPath, MethodParameters, toHex } from './utils'
-import IQuoter from '@uniswap/v3-periphery/artifacts/contracts/lens/Quoter.sol/Quoter.json'
+import IQuoter from '@planq-fi/periphery/artifacts/contracts/lens/Quoter.sol/Quoter.json'
 import IQuoterV2 from '@uniswap/swap-router-contracts/artifacts/contracts/lens/QuoterV2.sol/QuoterV2.json'
 import { Route } from './entities'
 import invariant from 'tiny-invariant'
@@ -30,7 +30,7 @@ interface BaseQuoteParams {
 }
 
 /**
- * Represents the Uniswap V3 QuoterV1 contract with a method for returning the formatted
+ * Represents the PlanqFi V3 QuoterV1 contract with a method for returning the formatted
  * calldata needed to call the quoter contract.
  */
 export abstract class SwapQuoter {
